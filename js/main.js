@@ -34,4 +34,11 @@ window.onclick = function(e) {
         dropdown_close(); 
     }
 } 
-  
+//sidebar aucoredin
+var sidebar_aucoredin = document.querySelectorAll('.sidebar_link');
+
+sidebar_aucoredin.forEach(function(item) { 
+    item.onclick = function(){
+        item.nextElementSibling.closest('.sidebar_treeview').classList.toggle('open')
+    }
+});

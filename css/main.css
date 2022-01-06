@@ -3,8 +3,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    transition: all .6s ease;  
 }
-ol,ul{list-style: none}
+ol,ul{
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none
+}
 a{text-decoration: none}
 /**************************************************/
 .wrapper{
@@ -14,11 +19,9 @@ a{text-decoration: none}
     min-height: 100%;
 }
 .main_view{
-    transition: all .6s ease;
     margin-left: 240px;
 }
 .main_sidebar{
-    transition: all .6s ease;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -30,6 +33,15 @@ a{text-decoration: none}
     display: flex;
     align-items: center;
     height: 70px;
+}
+.sidebar_treeview{
+    overflow: hidden;
+}
+.sidebar_treeview .treeview_item{
+    height: 0;
+}
+.sidebar_treeview.open .treeview_item{
+    height: 50px;
 }
 .main_sidebar .brand .logo_img{
     width: 40px;
@@ -45,6 +57,7 @@ a{text-decoration: none}
 }
 .main_sidebar .brand .logo_text{
     font-size: 26px;
+    margin: 0;
 }
 .main_sidebar .sidebar_link{
     display: flex;
@@ -132,7 +145,6 @@ a{text-decoration: none}
     width: 280px;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.3s ease;  
 }
 .main_nav .my_nav_dropdown.open .my_dropdown_menu{
     transform: scaleY(1);
@@ -186,6 +198,10 @@ body.rtl.sidebar_close .main_view{
 .main_nav .my_nav_dropdown .my_dropdown_menu{background-color: #f7f7f7}
 .main_content{background-color: #f7f7f7}
 .main_nav .nav_link .badge{ background-color: #1479ff;}
+.main_sidebar .sidebar_link:hover,
+.main_sidebar .sidebar_link.active{
+    background-color: #1479ff
+}
 /*******************************/
 .main_sidebar .brand .logo_text{color: #1e406c}
 .main_nav .toggle{color: #1e406c}
@@ -195,7 +211,10 @@ body.rtl.sidebar_close .main_view{
 .main_footer{color: #1479ff}
 .main_footer .copyright{color: #1479ff}
 .main_nav .nav_link .badge{color: #f7f7f7}
-
+.main_sidebar .sidebar_link:hover,
+.main_sidebar .sidebar_link.active{
+    color: #f7f7f7
+}
 .main_sidebar{box-shadow: 0 0 4px 1px #1479ff}
 .main_nav{box-shadow: 0 0 4px 1px #1479ff}
 .main_sidebar .brand{box-shadow: 0 0 4px 1px #1479ff}
