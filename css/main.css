@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+ol,ul{list-style: none}
+a{text-decoration: none}
+/**************************************************/
+.wrapper{
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    min-height: 100%;
+}
+.main_view{
+    transition: all .6s ease;
+    margin-left: 240px;
+}
+.main_sidebar{
+    transition: all .6s ease;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+}
+.main_sidebar .brand{
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+.main_sidebar .brand .logo_img{
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.main_sidebar .brand .logo_img img{
+    width: 100%;
+    min-height: 100%;
+}
+.main_sidebar .brand .logo_text{
+    font-size: 26px;
+}
+.main_sidebar .sidebar_link{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 50px;
+    font-size: 24px;
+}
+.main_sidebar .sidebar_link .icon{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    margin: 0 15px;
+}
+.main_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+.main_nav .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 40px;
+    font-size: 22px;
+    padding: 0 15px;
+}
+.main_nav .user_actions{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 40px;
+    margin: 0;
+    font-size: 22px;
+}
+.main_nav .user_actions .action{
+    margin: 0 10px;
+}
+.main_nav .nav_link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 12px;
+}
+.main_nav .nav_link .badge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -10px;
+    position: absolute;
+    top: -7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.main_nav .nav_link .img{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    margin-right: 7px;
+}
+.main_nav .nav_link .img img{
+    width: 100%;
+    min-height: 100%;
+}
+.main_nav .nav_link .text{
+    font-size: 18px;
+}
+.main_nav .my_nav_dropdown{
+    position: relative;
+}
+.main_nav .my_nav_dropdown .dropdown_clickable{
+    cursor: pointer;
+}
+.main_nav .my_nav_dropdown .my_dropdown_menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 280px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;  
+}
+.main_nav .my_nav_dropdown.open .my_dropdown_menu{
+    transform: scaleY(1);
+}
+.main_content{
+    margin: 5px;
+    padding: 10px;
+    min-height: 100vh;
+}
+.main_footer{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 15px;
+    height: 70px;
+}
+/**************ltr close*****************/
+.sidebar_close .main_sidebar{width: 70px}
+.sidebar_close .main_view{margin-left: 70px}
+/**************rtl open*****************/
+body.rtl{direction: rtl;}
+body.rtl .main_view{
+    margin-left: 0;
+    margin-right: 240px;
+}
+body.rtl .main_sidebar{right: 0}
+body.rtl .main_nav .nav_link .badge{
+    right: auto;
+    left: -10px;
+}
+body.rtl .main_nav .nav_link .img{
+    margin-right: 0;
+    margin-left: 7px;
+}
+body.rtl .main_nav .my_nav_dropdown .my_dropdown_menu{
+    right: auto;
+    left: 0;    
+}
+/**************rtl close*****************/
+body.rtl.sidebar_close .main_view{
+    margin-left: 0 !important;
+    margin-right: 70px !important;
+}
+/************container size**************/
+.wrapper{width: 100%}
+/******************default color*********************/
+.main_sidebar{background-color: #f7f7f7}
+.main_nav{background-color: #f7f7f7}
+.main_footer{background-color: #f7f7f7}
+.main_nav .nav_link{background-color: #f7f7f7}
+.main_nav .my_nav_dropdown .my_dropdown_menu{background-color: #f7f7f7}
+.main_content{background-color: #f7f7f7}
+.main_nav .nav_link .badge{ background-color: #1479ff;}
+/*******************************/
+.main_sidebar .brand .logo_text{color: #1e406c}
+.main_nav .toggle{color: #1e406c}
+.main_nav .nav_link{color: #1e406c}
+.main_footer{color: #1e406c}
+.main_sidebar .sidebar_link{color: #1e406c}
+.main_footer{color: #1479ff}
+.main_footer .copyright{color: #1479ff}
+.main_nav .nav_link .badge{color: #f7f7f7}
+
+.main_sidebar{box-shadow: 0 0 4px 1px #1479ff}
+.main_nav{box-shadow: 0 0 4px 1px #1479ff}
+.main_sidebar .brand{box-shadow: 0 0 4px 1px #1479ff}
+.main_footer{box-shadow: 0 0 4px 1px #1479ff}
+/*******************************/
+
