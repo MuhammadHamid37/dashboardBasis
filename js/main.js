@@ -42,3 +42,71 @@ sidebar_aucoredin.forEach(function(item) {
         item.nextElementSibling.closest('.sidebar_treeview').classList.toggle('open')
     }
 });
+
+const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+];
+
+const data = {
+    labels: labels,
+    datasets: [{
+        label: 'My First dataset',
+        backgroundColor: '#1479ff',
+        borderColor: '#1e406c',
+        data: [25, 10, 5, 2, 20, 30, 45],
+    }]
+};
+
+const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+};
+
+const myChart = new Chart(
+    document.getElementById('chart1'),
+    config
+);
+
+
+const labels2 = [
+    'green',
+    'blue',
+    'red',
+];
+
+const data2 = {
+    labels: labels2,
+    datasets: [{
+        label: 'My First dataset',
+        backgroundColor: ["#1abc9c", "#3498db", "#9b59b6"],
+        borderColor: '#ffffff',
+        data: [25, 10, 5],
+    }]
+};
+
+const config2 = {
+    type: 'pie',
+    data: data2,
+    options: {
+        responsive: true,
+        plugins: {
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: true,
+            text: 'Chart.js Pie Chart'
+        }
+        }
+    },
+};
+const myChart2 = new Chart(
+    document.getElementById('chart2'),
+    config2
+);
